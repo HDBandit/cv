@@ -22,15 +22,14 @@
 \usepackage[sc,osf]{mathpazo}
 \usepackage{amsmath}
 
-\def\name{Gil Vegliach}
-\def\footerlink{http://gilvegliach.it/files/CV.pdf}
+\def\name{Gerard Vico}
 
 % PDF metadata
 \hypersetup{
   colorlinks = true,
   urlcolor = black,
   pdfauthor = {\name},
-  pdfkeywords = {android, software development, algorithms, computer science, mathematics},
+  pdfkeywords = {scala, java, software development, algorithms, computer science, functional programming},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
@@ -83,39 +82,30 @@
 \begin{minipage}{0.45\linewidth}
   \begin{tabular}{llll}
     Mobile: & On request %+44 7722 958465
-       & Blog: & \href{https://clevercoder.net}{\tt https://clevercoder.net} \\
-    Email: & \href{mailto:gil.vegliach@gmail.com}{\tt gil.vegliach@gmail.com} 
-       & GitHub: &\href{https://github.com/gilvegliach}{\tt https://github.com/gilvegliach}\\
-    Languages: & \textsc{en}, \textsc{de}, \textsc{it} 
-       & StackOverflow: & \href{https://goo.gl/shvInz}{\tt https://goo.gl/shvInz} \\      
+    Email: & \href{mailto:gerard.vico@gmail.com}{\tt gerard.vico@gmail.com} 
+       & GitHub: &\href{https://github.com/HDBandit}{\tt https://github.com/HDBandit}\\
+    Languages: & \textsc{sp}, \textsc{en}, \textsc{cat}       
   \end{tabular}
 \end{minipage}
 
 \bigskip
 \textsc{Keywords}: 
-AWS, EC2, DynamoDB, JSON, REST, Microservices, Scala, Play 2.x, SBT, Java, Spring, Maven,
-Android, Gradle, Dagger~2, Guice, Butterknife, Retrofit, Gson, Espresso, JUnit, 
-GHE, Git, Jira, Agile, Scrum.
+AWS, EC2, DynamoDB, MySQL, SQS, SNS, JSON, REST, SOLID, Microservices, Scala, Java, Play 2.x, SBT, Java, Spring, Spring Boot, Spring Cloud, Maven,
+Akka, Akka Cluster, Actor Model, Docker, JUnit, Mockito, Git, Jira, Agile, Scrum.
 
 \section*{Employment}
 \begin{no-indent-itemize}
 %  \item \textsc{Google}, Software Engineer, Oct 2018--present.
 %  \begin{itemize}
 %  \end{itemize}
-  \item \textsc{Amazon}, Software Engineer, July 2017--July 2018.
+  \item \textsc{Letgo}, Scala Software Engineer, June 2016--Present.
   \begin{itemize}
-    \item\bullet Integrated a dynamic config service and reduced onboarding time from 2h to some minutes.
-    \item\bullet Built a service to transfer auth status from web to devices.
-    \item\bullet Developed a solution based on CloudFront to reduce latency and time-in-the-network.
-    \item\bullet Refactored metrics and alarms to reduce autocut tickets to decrease on-call burden.
-    \item\bullet Responsible for the operations of two tier-1 services with world-scale load.
+    \item\bullet Developed a distributed chat application based on web sockets with Play framework, Scala, Akka Actors Model and Akka Cluster.
+    \item\bullet Solve platform scalability problems (sharding WS connections).
+    \item\bullet Refactored legacy code following best practices.
     \item\bullet On-call and hot fix responsibility for such services.
   \end{itemize}
-  \item \textsc{Toptal} (3\% admission rate), Software Engineer, contractor, Apr 2016--present.
-  \begin{itemize}
-    \item\bullet Global Mentor, helping students from low income backgrounds (\href{https://goo.gl/sbqDdC}{https://goo.gl/sbqDdC}).
-  \end{itemize}
-  \item \textsc{Zalando} (3.6\textsc{b} rev 2016), Software Engineer, Mar 2015--May 2017.
+  \item \textsc{Zyncro}, Java Software Engineer, Dec 2015--Apr 2016.
   \begin{itemize}
     \item\bullet Developed first high-load mobile API micro-service in Scala, 1000+ rps.
     \item\bullet Implemented a crawler to monitor the content and the availability of home and campaign pages.
@@ -127,68 +117,30 @@ GHE, Git, Jira, Agile, Scrum.
     \item\bullet Given internal workshops on testability, unit testing, and code quality.
     \item\bullet Mentored new developers, especially in functional languages like Scala.
   \end{itemize}
-  \item \textsc{Cortado AG}, Software Engineer, Jun 2013--Feb 2015.
+  \item \textsc{Grifols}, Java Software Engineer, Jan 2007--Dec 2015.
   \begin{itemize}
     \item\bullet Prototyped and responsible for architecture of Cortado Corporate and Templace.
     \item\bullet Implemented key components such as preview, navigation, file operations, favorites, and others.
     \item\bullet Ported and adapted Personal Printing, a print job managing app.
     \item\bullet Collaborated with UX and product teams to assess requirements.
   \end{itemize}
-  \item \textsc{National ICT Australia}, Software Engineer and Researcher intern, Aug--Dec 2012. 
+  \item \textsc{Indra}, Java Software Engineer, Feb 2006--Dec 2006. 
   \begin{itemize}
-    \item\bullet Asked back to continue previous work after excellent performance.
-    \item\bullet Expanded on the previous solution resulting in multiple scientifical publications.
-  \end{itemize}
-  \item \textsc{Siemens}, Software Engineer intern Feb--Apr 2012.
-  \begin{itemize}
-    \item\bullet Reduced REAgent start-up time (\tilde 40 sec) replacing Drool Fusion with 
-          ad-hoc algorithms.
-    \item\bullet Optimized queries in Optique which resulted in a demo for external customers.
-  \end{itemize}
-  \item \textsc{National ICT Australia}, Software Engineer and Researcher intern, Aug--Nov 2011. 
-  \begin{itemize}
-    \item\bullet Developed a solution for Android security, published at the Nasa Formal Methods \\
-    \phantom{\bullet }Symposium~2012.
+    \item\bullet Developed a web services layer for Banc Sabadell.
+    \item\bullet Developed a frontend based on Zk framework (Ajax).
   \end{itemize}
 \end{no-indent-itemize}
 
 \section*{Education}
 \begin{no-indent-itemize}
-  \item M.Sc. EMCL (Computational Logic in Computer Science), Technische Universit\"{a}t Wien, 2010--Apr 2013,
-       Austrian average: 1.2 on a scale 1.0--5.0 (Excellent); thesis mark: 1.0; European mark: A, \tilde US: 3.9-4.0 GPA
-  \item B.S. Mathematics, University of Trieste, 2006--2010, mark: 110/110 cum laude, \tilde US: 4.0 GPA.
+  \item UNIVERSIDAD POLITÉCNICA DE CATALUÑA, Barcelona (Computer Systems Engineer) 2002--2006
 \end{no-indent-itemize}
 
 \section*{Continuous Learning and Certifications}
 \begin{no-indent-itemize}
-  \item AWS Certified Solutions Architect---Associate, 5 Jan 2018, (\href{https://goo.gl/sdm8a3}{https://goo.gl/sdm8a3}), score~87\%
-  \item Oracle Certified Programmer, Java SE 5/6 (OCPJP, formerly SCJP), 28 Jun 2012, score~95\%
-  \item Oracle Certified Associate, Java SE 5/6 (SCJA), 10 Jul 2010, score~86\%
-  \item Big Data Analysis with Scala and Spark by EPFL on Coursera 
-        (\href{https://goo.gl/N8garp}{https://goo.gl/N8garp}), score~100\%
-  \item Parallel programming in Scala by EPFL on Coursera 
-        (\href{http://goo.gl/mqKWo3}{http://goo.gl/mqKWo3}), score~100\%
-  \item Functional Program Design in Scala by EPFL on Coursera 
-        (\href{https://goo.gl/vP9Kkf}{http://goo.gl/rrRViR}), score~100\%
-  \item Functional Programming Principles in Scala by EPFL on Coursera 
-        (\href{https://goo.gl/vP9Kkf}{https://goo.gl/vP9Kkf}), score~100\%
-  \item Computational Investing by Georgia Tech on Coursera 
-        (\href{https://goo.gl/oM9SZg}{https://goo.gl/oM9SZg}), score~100\%
-  \item Accounting \& Financial Statement Analysis by 365 Careers
-        (\href{https://goo.gl/sUgBXG}{https://goo.gl/sUgBXG})
+  \item Oracle Certified Programmer, Java SE 7 (OCPJP, formerly SCJP)
 \end{no-indent-itemize}
 
-\section*{Scientific Publications}
-\begin{no-indent-itemize}
-  \item The ins and outs of first-order runtime verification, 2015, with A.~Bauer and J.~K\"{u}star, 
-        {\it Formal Methods in System Design~46(3)}
-  \item From propositional to first-order monitoring, 2013, with A.~Bauer and J.~K\"{u}star, 
-        {\it Proc. 4th International Conference on Runtime Verification~(RV)}
-  \item Runtime Verification meets Android Security, 2012, with A.~Bauer and J.~K\"{u}star, 
-        {\it NASA Formal Methods Symposium~(NFM 2012)}
-  \item Incomplete Databases: Missing Records and Missing Values, 2012, workshop paper with 
-        W.~Nutt and S.~Razniewski, {\it Data Quality in Data Integration Systems (DQIS 2012)}
-\end{no-indent-itemize}
 
 \bigskip
 \begin{center}
