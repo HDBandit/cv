@@ -1,153 +1,175 @@
-% LaTeX Curriculum Vitae Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
+% LaTeX Template
+% Version 1.0 (28/1/19)
 %
-% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
-% http://jblevins.org/projects/cv-template/
+% This template originates from:
+% http://www.LaTeXTemplates.com
 %
-% You may use use this document as a template to create your own CV
-% and you may redistribute the source code freely. No attribution is
-% required in any resulting documents. I do ask that you please leave
-% this notice and the above URL in the source code if you choose to
-% redistribute this file.
+% Authors:
+% Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper]{article}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-\usepackage{hyperref}
-\usepackage{geometry}
-\usepackage{xspace}
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 
-% Comment the following lines to use the default Computer Modern font
-% instead of the Palatino font provided by the mathpazo package.
-% Remove the 'osf' bit if you don't like the old style figures.
-\usepackage[T1]{fontenc}
-\usepackage[sc,osf]{mathpazo}
-\usepackage{amsmath}
-
-\def\name{Gerard Vico}
-
-% PDF metadata
-\hypersetup{
-  colorlinks = true,
-  urlcolor = black,
-  pdfauthor = {\name},
-  pdfkeywords = {scala, java, software development, algorithms, computer science, functional programming},
-  pdftitle = {\name: Curriculum Vitae},
-  pdfsubject = {Curriculum Vitae},
-  pdfpagemode = UseNone
-}
-
-\geometry{
-  body={6.5in, 8.5in},
-  left=1.0in,
-  top=1.25in
-}
-
-% Page headers
-\pagestyle{myheadings}
-\markright{\name}
-\thispagestyle{empty}
-
-% Custom section fonts
-\usepackage{sectsty}
-\sectionfont{\rmfamily\mdseries\Large}
-\subsectionfont{\rmfamily\mdseries\itshape\large}
-
-% Don't indent paragraphs.
-\setlength\parindent{0em}
-
-% Make lists without bullets
-\renewenvironment{itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
-  }
-}{
-  \end{list}
-}
-
-\newenvironment{no-indent-itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{0em}
-  }
-}{
-  \end{list}
-}
-
-\def\tilde{$\scriptstyle\sim$}
-\def\bullet{$\circ$\xspace}
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-{\huge \name}
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
 
-\bigskip
-\begin{minipage}{0.45\linewidth}
-  \begin{tabular}{llll}
-    Mobile: & On request %+44 7722 958465
-    Email: & \href{mailto:gerard.vico@gmail.com}{\tt gerard.vico@gmail.com} 
-       & GitHub: &\href{https://github.com/HDBandit}{\tt https://github.com/HDBandit}\\
-    Languages: & \textsc{sp}, \textsc{en}, \textsc{cat}       
-  \end{tabular}
+\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	% If your name is very short, use just one of the lines below
+	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Gerard}}}}} % First name
+	
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Vico}}}}} % Last name
+	
+	\vspace{6pt}
+	
+	{\huge Scala/Java developer} % Career or current job title
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\icon{MapMarker}{12}{Barcelona, Spain}\\
+	\icon{Phone}{12}{On request}\\
+	\icon{At}{12}{\href{mailto:gerard.vico@gmail.com}{gerard.vico@gmail.com}}\\	
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\icon{Github}{12}{\href{https://github.com/hdbandit}{github.com/hdbandit}}\\
 \end{minipage}
 
-\bigskip
-\textsc{Keywords}: 
-AWS, EC2, DynamoDB, MySQL, SQS, SNS, JSON, REST, SOLID, Microservices, Scala, Java, Play 2.x, SBT, Java, Spring, Spring Boot, Spring Cloud, Maven,
-Akka, Akka Cluster, Actor Model, Docker, JUnit, Mockito, Git, Jira, Agile, Scrum.
+\vspace{0.5cm}
 
-\section*{Employment}
-\begin{no-indent-itemize}
-%  \item \textsc{Google}, Software Engineer, Oct 2018--present.
-%  \begin{itemize}
-%  \end{itemize}
-  \item \textsc{Letgo}, Scala Software Engineer, June 2016--Present.
-  \begin{itemize}
-    \item\bullet Developed a distributed chat application based on web sockets with Play framework, Scala, Akka Actors Model and Akka Cluster.
-    \item\bullet Solve platform scalability problems (sharding WS connections).
-    \item\bullet Refactored legacy code following best practices.
-    \item\bullet On-call and hot fix responsibility for such services.
-  \end{itemize}
-  \item \textsc{Zyncro}, Java Software Engineer, Dec 2015--Apr 2016.
-  \begin{itemize}
-    \item\bullet Developed first high-load mobile API micro-service in Scala, 1000+ rps.
-    \item\bullet Implemented a crawler to monitor the content and the availability of home and campaign pages.
-    \item\bullet Built a caching layer with Clojure and ElasticCache to tell the login status of a customer.
-    \item\bullet Set architectural patterns in the Android app to improve test coverage.
-    \item\bullet Decreased Android app startup time by \tilde 65\% and crash rate to <0.5\%.
-    \item\bullet Built a Chrome extension to inject OAuth 2.0 tokens into URL ranges to improve dev productivity.
-    \item\bullet Interviewed countless developers, juniors to leads, doubling the Android team in less than 6 months.
-    \item\bullet Given internal workshops on testability, unit testing, and code quality.
-    \item\bullet Mentored new developers, especially in functional languages like Scala.
-  \end{itemize}
-  \item \textsc{Grifols}, Java Software Engineer, Jan 2007--Dec 2015.
-  \begin{itemize}
-    \item\bullet Prototyped and responsible for architecture of Cortado Corporate and Templace.
-    \item\bullet Implemented key components such as preview, navigation, file operations, favorites, and others.
-    \item\bullet Ported and adapted Personal Printing, a print job managing app.
-    \item\bullet Collaborated with UX and product teams to assess requirements.
-  \end{itemize}
-  \item \textsc{Indra}, Java Software Engineer, Feb 2006--Dec 2006. 
-  \begin{itemize}
-    \item\bullet Developed a web services layer for Banc Sabadell.
-    \item\bullet Developed a frontend based on Zk framework (Ajax).
-  \end{itemize}
-\end{no-indent-itemize}
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
 
-\section*{Education}
-\begin{no-indent-itemize}
-  \item UNIVERSIDAD POLITÉCNICA DE CATALUÑA, Barcelona (Computer Systems Engineer) 2002--2006
-\end{no-indent-itemize}
+\cvsect{Who Am I?}
 
-\section*{Continuous Learning and Certifications}
-\begin{no-indent-itemize}
-  \item Oracle Certified Programmer, Java SE 7 (OCPJP, formerly SCJP)
-\end{no-indent-itemize}
+\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	\lorem \lorem \lorem \lorem \lorem\\ % Dummy text
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	\begin{barchart}{5.5}
+		\baritem{Java}{60}
+		\baritem{Scala}{60}
+		\baritem{Functional programming}{100}
+		\baritem{SOLID}{70}
+		\baritem{AWS}{70}
+		\baritem{Git}{40}
+		\baritem{SBT}{60}
+	        \baritem{Play Framework}{60}
+	\end{barchart}
+\end{minipage}
 
-
-\bigskip
 \begin{center}
-  \begin{footnotesize}
-    Last updated: \today \\
-    \href{\footerlink}{\texttt{\footerlink}}
-  \end{footnotesize}
+	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
 \end{center}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\cvsect{Experience}
+
+\begin{entrylist}
+	\entry
+		{2017 -- 3/2018}
+		{Front-end developer}
+		{Big Corporation Name Inc.}
+		{\lorem \lorem \lorem\\ \texttt{node.js}\slashsep\texttt{Vue.js}\slashsep\texttt{Electron}}
+	\entry
+		{2015 -- 2018\\\footnotesize{part time}}
+		{Full stack developer}
+		{Famous Eshop Inc.}
+		{\lorem\lorem\\ \texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{MariaDB}\slashsep\texttt{Linux}}
+	\entry
+		{2013 -- 2014\\\footnotesize{part time}}
+		{Junior PHP Developer}
+		{example.com}
+		{\lorem\lorem\\ \texttt{PHP}\slashsep\texttt{Laravel}}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\cvsect{Education}
+
+\begin{entrylist}
+	\entry
+		{2013 -- 2017}
+		{Master's Degree}
+		{Another University Name}
+		{\lorem\lorem\lorem}
+	\entry
+		{2014}
+		{Postgraduate Diploma}
+		{A University Name}
+		{\lorem\lorem}
+	\entry
+		{2007 -- 2013}
+		{Bachelor's Degree}
+		{A University Name}
+		{\lorem\lorem}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\cvsect{Languages}
+	
+	\textbf{English} - native\\
+	\textbf{German} - proficient\\
+	\textbf{Polish} - rudimentary
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	\cvsect{Hobbies}
+	
+	I love... \lorem
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	\cvsect{Non profit}
+	
+	I help... \lorem
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
 
 \end{document}
